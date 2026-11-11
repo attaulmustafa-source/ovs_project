@@ -1,0 +1,382 @@
+/* NVQF / HRMS centered login card (matches registration_sys nvqf-login.html) */
+
+:root {
+  --nvqf-login-blue: #4b62be;
+  --nvqf-login-blue2: #2f4798;
+  --nvqf-login-bluebg: rgba(75, 98, 190, 0.08);
+  --nvqf-login-text: #0f1729;
+  --nvqf-login-text2: #526080;
+  --nvqf-login-text3: #9aaabf;
+  --nvqf-login-surface: #ffffff;
+  --nvqf-login-border: #e2e8f5;
+  --nvqf-login-amber: #f59e0b;
+  --nvqf-login-form-title: #001a33;
+  --nvqf-login-form-subtitle: #4a6fa5;
+  --nvqf-field-border-idle: #dee7f1;
+  --nvqf-field-border-focus: #5c67f7;
+  --nvqf-field-ring: rgba(92, 103, 247, 0.2);
+  --nvqf-field-radius: 8px;
+}
+
+.nvqf-login-page {
+  box-sizing: border-box;
+  min-height: 100vh;
+  min-height: 100dvh;
+  font-family: 'Plus Jakarta Sans', var(--font);
+  font-size: 15px;
+  color: var(--nvqf-login-text);
+  background: var(--nvqf-login-bluebg);
+  background-image: radial-gradient(rgba(75, 98, 190, 0.12) 1px, transparent 1px);
+  background-size: 20px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+}
+
+.nvqf-login-page *,
+.nvqf-login-page *::before,
+.nvqf-login-page *::after {
+  box-sizing: border-box;
+}
+
+.nvqf-login-shell {
+  width: 100%;
+  max-width: 920px;
+  border-radius: 20px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
+  box-shadow: 0 4px 24px rgba(15, 23, 41, 0.08), 0 12px 48px rgba(15, 23, 41, 0.06);
+  background: var(--nvqf-login-surface);
+}
+
+.nvqf-panel-brand {
+  background: var(--nvqf-login-blue2);
+  color: #fff;
+  padding: 32px 28px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 520px;
+  overflow-y: auto;
+}
+
+.nvqf-panel-brand-inner {
+  width: 100%;
+  max-width: 36rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.nvqf-brand-logo {
+  width: fit-content;
+  max-width: 100%;
+  border-radius: 14px;
+  background: #fff;
+  border: 1px solid var(--nvqf-login-border);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  padding: 10px 14px;
+}
+
+.nvqf-brand-logo img {
+  display: block;
+  width: 115px;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.nvqf-brand-welcome-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.35;
+  margin: 0 0 6px;
+  color: #fff;
+}
+
+.nvqf-brand-welcome-urdu {
+  font-family: 'Nunito', var(--font);
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.45;
+  margin: 0 0 14px;
+  color: #fff;
+}
+
+.nvqf-brand-mission {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.82);
+  margin: 0 0 18px;
+  text-align: center;
+}
+
+.nvqf-brand-info {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.nvqf-brand-info:last-of-type {
+  margin-bottom: 18px;
+}
+
+.nvqf-brand-info p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #fff;
+  line-height: 1.5;
+}
+
+.nvqf-brand-info-sub {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 6px;
+}
+
+.nvqf-brand-info strong {
+  color: var(--nvqf-login-amber);
+  font-weight: 700;
+}
+
+.nvqf-brand-info-icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 6px;
+  color: #9eb7f0;
+  font-size: 1.05rem;
+}
+
+.nvqf-brand-footer {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 22px;
+}
+
+.nvqf-panel-form {
+  background: var(--nvqf-login-surface);
+  padding: 44px 40px 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.nvqf-form-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.nvqf-form-header h1 {
+  font-family: inherit;
+  font-size: 1.65rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin: 0 0 8px;
+  color: var(--nvqf-login-form-title);
+}
+
+.nvqf-form-header p {
+  font-family: inherit;
+  font-weight: 400;
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--nvqf-login-form-subtitle);
+}
+
+.nvqf-form-field {
+  margin-bottom: 20px;
+}
+
+.nvqf-form-field label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--nvqf-login-blue);
+}
+
+.nvqf-form-field label.nvqf-label-muted {
+  color: var(--nvqf-login-text3);
+}
+
+.nvqf-form-field .required {
+  font-size: 0.7rem;
+  color: #ef4444;
+  vertical-align: super;
+}
+
+.nvqf-form-field .form-control {
+  width: 100%;
+  height: 46px;
+  min-height: 46px;
+  padding: 0 14px;
+  border: 1px solid var(--nvqf-field-border-idle);
+  border-radius: var(--nvqf-field-radius);
+  background: #fff;
+  font-size: 0.9rem;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.nvqf-form-field .form-control:focus {
+  outline: none;
+  border-color: var(--nvqf-field-border-focus);
+  box-shadow: 0 0 0 2px var(--nvqf-field-ring);
+}
+
+.nvqf-password-wrap {
+  position: relative;
+}
+
+.nvqf-password-wrap .form-control {
+  padding-right: 2.75rem;
+}
+
+.nvqf-password-toggle {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  padding: 0.25rem;
+  color: rgb(110, 130, 159);
+  cursor: pointer;
+  line-height: 1;
+  font-size: 1.25rem;
+}
+
+.nvqf-password-toggle:hover {
+  color: var(--nvqf-login-text);
+}
+
+.nvqf-remember {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.nvqf-remember input[type='checkbox'] {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  accent-color: var(--nvqf-login-blue2);
+  cursor: pointer;
+}
+
+.nvqf-remember label {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--nvqf-login-text2);
+  cursor: pointer;
+  margin: 0;
+}
+
+.nvqf-btn-login {
+  width: 100%;
+  height: 48px;
+  border: none;
+  border-radius: 10px;
+  background: var(--nvqf-login-blue2);
+  color: #fff;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(47, 71, 152, 0.35);
+  transition: opacity 0.15s, transform 0.1s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nvqf-btn-login:hover:not(:disabled) {
+  opacity: 0.94;
+}
+
+.nvqf-btn-login:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.nvqf-form-footer {
+  text-align: center;
+  margin-top: 28px;
+}
+
+.nvqf-form-footer p {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--nvqf-login-text2);
+  line-height: 1.55;
+}
+
+.nvqf-form-footer a {
+  color: var(--nvqf-login-blue);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.nvqf-form-footer a:hover {
+  text-decoration: underline;
+}
+
+.nvqf-btn-outline {
+  width: 100%;
+  margin-top: 12px;
+  min-height: 46px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--nvqf-login-blue);
+  border-radius: 10px;
+  background: #fff;
+  color: var(--nvqf-login-blue);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nvqf-btn-outline:hover {
+  background: var(--nvqf-login-bluebg);
+}
+
+@media (max-width: 768px) {
+  .nvqf-login-page {
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 12px 12px 32px;
+  }
+
+  .nvqf-login-shell {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    max-width: min(100%, 440px);
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 16px;
+  }
+
+  .nvqf-panel-brand {
+    min-height: auto;
+    padding: 24px 18px 20px;
+    order: 1;
+  }
+
+  .nvqf-panel-form {
+    padding: 28px 20px 24px;
+    order: 2;
+  }
+}

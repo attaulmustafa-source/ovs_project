@@ -1,0 +1,35 @@
+:root {
+  --body-bg: #f0f4fc;
+  --primary: #2f4798;
+  --primary-rgb: 47, 71, 152;
+  --primary-light: #4b62be;
+  --primary-tint: rgba(75, 98, 190, 0.08);
+  --secondary: #2f4798;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --danger: #fb4242;
+  --info: #0ea5e8;
+  --text: #212b37;
+  --text2: #526080;
+  --text3: #9aabbf;
+  --text-muted: #6e829f;
+  --border: #e2e8f0;
+  --input-border: #dee7f1;
+  --header-border: #e2e6f1;
+  --surface: #ffffff;
+  --surface-muted: #f7f9fe;
+  --sidebar-width: 230px;
+  --header-height: 4.25rem;
+  /* Match registration_sys radii + HRMS list chrome */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-panel: 12px;
+  --radius-control: 8px;
+  --shadow-default: 0px 6px 16px 2px rgba(0, 0, 0, 0.05);
+  --shadow-header: 0 0 16px 0 rgba(0, 0, 0, 0.05);
+  --shadow-btn: 0 2px 8px rgba(47, 71, 152, 0.25);
+  --font: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --nvqf-green: #10b981;
+  --nvqf-amber: #f59e0b;
+  --nvqf-blue: #2f4798;
+}
